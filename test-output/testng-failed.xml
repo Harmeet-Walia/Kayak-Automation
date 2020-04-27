@@ -6,7 +6,10 @@
       <class name="com.kayak.AutomationProject.Test_Search">
         <methods>
           <include name="TestSearch" invocation-numbers="0 1"/>
+          <include name="quitBrowser"/>
+          <include name="endReport"/>
           <include name="initiateDriver"/>
+          <include name="setExtent"/>
         </methods>
       </class> <!-- com.kayak.AutomationProject.Test_Search -->
     </classes>

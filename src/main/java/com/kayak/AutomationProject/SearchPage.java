@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 
 
@@ -108,7 +109,7 @@ public class SearchPage {
 		WebElement oldDepartDate=driver.findElement(departdateClearField);
 		Actions actions = new Actions(driver);
 		actions.click(departdatebox)
-				.pause(1500)
+				.pause(1400)
 				.click(oldDepartDate)
 				.pause(1000)
 				.build()
@@ -170,8 +171,8 @@ public class SearchPage {
 	public void selectTheFlight(int N) {
 		String xpathOfResult="//div[contains(@aria-label,' number "+N+"')]";
 		driver.findElement(By.xpath(xpathOfResult)).click();
-		
-		
+		String airlineName = driver.findElement(By.xpath("//*[contains(@id, 'info-leg-0')]/div/div[3]/div[2]")).getText();
+		Reporter.log("Name of the flight selected is : " + airlineName);
 	}
 
 	public String getOriginCity() {
