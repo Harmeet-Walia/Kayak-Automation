@@ -5,7 +5,7 @@
     <classes>
       <class name="com.kayak.AutomationProject.Test_Search">
         <methods>
-          <include name="TestSearch" invocation-numbers="2"/>
+          <include name="TestSearch" invocation-numbers="0 1"/>
           <include name="initiateDriver"/>
         </methods>
       </class> <!-- com.kayak.AutomationProject.Test_Search -->
